@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 70,
+      "minLength": 3
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "tshirts",
+        "hoodies",
+        "trackpants",
+        "shoes",
+        "sports"
+      ],
+      "default": "tshirts",
+      "required": true
+    },
+    "size": {
+      "type": "string",
+      "maxLength": 70
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "red",
+        "blue",
+        "green",
+        "yellow",
+        "black",
+        "white",
+        "orange"
+      ],
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "availableQty": {
+      "type": "integer",
+      "required": true
+    },
+    "brand": {
+      "type": "string",
+      "required": true
+    },
+    "features": {
+      "type": "text"
+    }
+  }
+}
